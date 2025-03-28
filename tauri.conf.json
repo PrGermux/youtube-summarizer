@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.tauri.app/config/1",
+  "build": {
+    "devPath": "../src",
+    "distDir": "../src",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "YouTube Summarizer",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "dialog": {
+        "all": true
+      }
+    },
+    "windows": [
+      {
+        "title": "YouTube Summarizer",
+        "width": 800,
+        "height": 1000,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true,
+        "visible": true
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.youtube-summarizer.app",
+      "icon": [
+        "icons/icon.png",
+        "icons/icon.ico"
+      ]
+    }
+  }
+}

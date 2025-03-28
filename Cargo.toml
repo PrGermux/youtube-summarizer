@@ -1,0 +1,26 @@
+[package]
+name = "youtube-summarizer"
+version = "0.1.0"
+description = "App for fetching transcript of YouTube video and further analysis with AI."
+authors = ["Pr.Germux"]
+edition = "2021"
+
+[dependencies]
+fix-path-env = { git = "https://github.com/tauri-apps/fix-path-env-rs" }
+tauri = { version = "1", features = ["shell-open", "dialog-all"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.12", features = ["json", "cookies", "default-tls"] }  # Replace "blocking" with "default-tls"
+scraper = "0.20"
+regex = "1.10.6"
+quick-xml = "0.22"
+
+# Add tokio runtime for async
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time"] }  # Added for async support
+
+[build-dependencies]
+tauri-build = { version = "1", features = [] }
+
+[features]
+# This feature is used for production builds or when a dev server is not specified, DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]
