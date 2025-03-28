@@ -24,4 +24,4 @@ AI Summarizing Languages: only for English transcript (in the future other langu
 
 OS: Windows, Android (in the future other OS)
 
-If you want to try, put API token here let api_token = ""; in `src/main.rs`
+If you want to try, put API token here `let api_token = "";` in `src/main.rs`
